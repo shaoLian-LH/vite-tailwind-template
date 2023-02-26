@@ -5,7 +5,15 @@ import BasicConfig from './vite.config.basic'
 export default mergeConfig(BasicConfig, defineConfig({
   mode: 'production',
   build: {
-    manifest: true, // 生成manifest.json文件
-    polyfillModulePreload: true, // 自动注入polyfill，不适用于构建工具库
+    manifest: true,
+    minify: 'terser',
+    terserOptions: {
+      sourceMap: false
+    },
+    modulePreload: {
+      polyfill: true
+    },
+    sourcemap: 'hidden', // 指定生成的sourcemap的格式
+    chunkSizeWarningLimit: 1024 // 单位为kbs，次数代表不超过1MB不进行警告
   }
 }))

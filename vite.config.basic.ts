@@ -69,6 +69,5 @@ export default defineConfig({
     outDir: 'dist', // 生成产物的存放文件夹
     assetsInlineLimit: 1024 * 1024 * 2, // 小于2MB的资源转化为base64资源，内联于代码中
     manifest: true, // 生成manifest.json文件
-    minify: 'terser' // 默认就是使用terser
   }
 })

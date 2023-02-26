@@ -6,7 +6,7 @@ export default mergeConfig(
   defineConfig({
     mode: 'development',
     server: {
-      port: 8080, // 开发时占用8080端口
+      port: 5173, // 开发时占用8080端口
       strictPort: true, // 端口被占用的时候直接退出，不移到下一个端口
       open: true, // 启动时自动打开浏览器
       proxy: {
@@ -21,9 +21,6 @@ export default mergeConfig(
     },
     build: {
       sourcemap: 'inline', // 指定生成的sourcemap的格式
-      terserOptions: {
-        sourceMap: true // 生成sourcemap
-      },
       chunkSizeWarningLimit: 1024 // 单位为kbs，次数代表不超过1MB不进行警告
     }
   })
