@@ -1,3 +1,8 @@
-auto-import.d.ts
 node_modules
 .DS_Store
+
+# auto-generated files
+src/antdComponents.d.ts
+src/components.d.ts
+src/auto-import.d.ts
+auto-import.d.ts
